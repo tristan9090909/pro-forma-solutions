@@ -40,9 +40,9 @@ const highlights = [
 export const accueil = {
   url: '/',
   file: 'index.html',
-  title: 'Formation management d’équipe RS6931 | Forma Pro Solutions',
+  title: 'Formation management d’équipe | Forma Pro Solutions',
   description:
-    'Formation certifiante au management de proximité (RS6931) : 21 heures à distance, en visioconférence. Organisme de formation certifié Qualiopi.',
+    'Formation au management de proximité : 21 heures à distance, en visioconférence. Organisme de formation certifié Qualiopi.',
   build() {
     return html`
       <section class="hero">
@@ -90,7 +90,7 @@ export const accueil = {
             </div>
 
             <p class="eyebrow eyebrow--light">
-              Certification ${training.code} — ${training.repertoire}
+              Management de proximité — formation à distance
             </p>
             <h1 class="hero__title">
               Le management d’équipe pour les professionnels qui gardent leur métier
@@ -112,17 +112,17 @@ export const accueil = {
             </ul>
           </div>
 
-          <aside class="hero__card" aria-label="Repères de la certification">
-            <p class="hero__card-eyebrow">Formation certifiante</p>
+          <aside class="hero__card" aria-label="Repères de la formation">
+            <p class="hero__card-eyebrow">Formation professionnelle</p>
             <p class="hero__card-title">${training.title}</p>
             <dl class="hero__card-list">
               <div>
-                <dt>Code</dt>
-                <dd>${training.code} — ${training.repertoire}</dd>
+                <dt>Durée</dt>
+                <dd>21 heures — 3 journées</dd>
               </div>
               <div>
-                <dt>Certificateur</dt>
-                <dd>${training.certifier}</dd>
+                <dt>Format</dt>
+                <dd>${training.place}</dd>
               </div>
               <div>
                 <dt>Tarif</dt>
@@ -145,9 +145,8 @@ export const accueil = {
               ${company.legalName} est un organisme de formation professionnelle certifié Qualiopi.
               Nous formons les professionnels qui encadrent une équipe tout en continuant d’exercer
               leur métier : chefs d’équipe, responsables de service, experts en prise de fonction
-              managériale. Notre offre repose sur une formation certifiante,
-              « ${training.title} » (${training.code}), animée à distance par un formateur issu du
-              terrain.
+              managériale. Notre offre repose sur une formation dédiée,
+              « ${training.title} », animée à distance par un formateur issu du terrain.
             </p>
           </div>
         </div>
@@ -169,7 +168,7 @@ export const accueil = {
             )}
           </ul>
           <p class="section__footnote">
-            Les six compétences attestées par la certification sont reproduites intégralement sur la
+            Les six compétences travaillées sont détaillées sur la
             <a href="/formation/#objectifs">page de la formation</a>.
           </p>
         `,
@@ -183,27 +182,24 @@ export const accueil = {
             <p class="feature__text">
               Trois journées de 7 heures en visioconférence synchrone, en groupe de 6 à 12
               participants, construites autour de mises en situation et d’outils directement
-              réutilisables en poste. L’évaluation certificative est incluse dans le tarif.
+              réutilisables en poste.
             </p>
             <ul class="feature__list" role="list">
               <li>${icon('check', { className: 'icon icon--sm' })}6 modules de 3h30</li>
               <li>${icon('check', { className: 'icon icon--sm' })}${training.groupSize}</li>
               <li>
-                ${icon('check', { className: 'icon icon--sm' })}Évaluation certificative incluse
-                dans le tarif
+                ${icon('check', { className: 'icon icon--sm' })}Évaluation des acquis tout au long
+                du parcours
               </li>
               <li>
-                ${icon('check', { className: 'icon icon--sm' })}Certification ${training.code},
-                certificateur ${training.certifier}
+                ${icon('check', { className: 'icon icon--sm' })}Attestation de fin de formation
               </li>
             </ul>
             <div class="feature__actions">
               <a class="btn btn--primary" href="/formation/">
                 Voir le programme détaillé ${icon('arrow', { className: 'icon icon--sm' })}
               </a>
-              <a class="btn btn--ghost" href="${training.programPdf}" download>
-                ${icon('download', { className: 'icon icon--sm' })}Programme (PDF)
-              </a>
+              <a class="btn btn--ghost" href="/contact/">Nous contacter</a>
             </div>
           </div>
 

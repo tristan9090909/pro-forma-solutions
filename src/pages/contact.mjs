@@ -1,14 +1,14 @@
 import { html } from '../lib/html.mjs';
 import { icon } from '../lib/icons.mjs';
 import { pageHero, section } from '../templates/components.mjs';
-import { site, company, training } from '../data/site.mjs';
+import { site, company } from '../data/site.mjs';
 
 export const contact = {
   url: '/contact/',
   file: 'contact/index.html',
   title: 'Contact | Forma Pro Solutions',
   description:
-    'Contactez Forma Pro Solutions pour toute question sur la formation au management d’équipe (RS6931) : formulaire, e-mail et téléphone. Réponse sous 48 heures ouvrées.',
+    'Contactez Forma Pro Solutions pour toute question sur la formation au management d’équipe : formulaire, e-mail et téléphone. Réponse sous 48 heures ouvrées.',
   breadcrumb: [{ label: 'Contact', url: '/contact/' }],
   build() {
     return html`
@@ -180,8 +180,8 @@ export const contact = {
             <div class="contact-card contact-card--muted">
               <h2 class="contact-card__title">Avant de nous écrire</h2>
               <p>
-                Le programme officiel de la formation ${training.code}, les objectifs, les prérequis
-                et le tarif sont détaillés sur la page dédiée.
+                Le programme de la formation, les objectifs, les prérequis et le tarif sont
+                détaillés sur la page dédiée.
               </p>
               <a class="link-arrow" href="/formation/">
                 Consulter la formation ${icon('arrow', { className: 'icon icon--sm' })}

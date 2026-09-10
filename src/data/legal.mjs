@@ -77,7 +77,7 @@ export const mentionsLegales = {
       blocks: [
         {
           type: 'p',
-          text: 'Le site peut contenir des liens vers des sites tiers (notamment France Compétences). Forma Pro Solutions n’exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.',
+          text: 'Le site peut contenir des liens vers des sites tiers. Forma Pro Solutions n’exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.',
         },
       ],
     },
@@ -98,7 +98,7 @@ export const cgv = {
   slug: 'conditions-generales-de-vente',
   metaTitle: 'Conditions générales de vente | Forma Pro Solutions',
   metaDescription:
-    'Conditions générales de vente de Forma Pro Solutions : objet, formation proposée, prérequis, modalités d’inscription, tarif, rétractation, évaluation et certification.',
+    'Conditions générales de vente de Forma Pro Solutions : objet, formation proposée, prérequis, modalités d’inscription, tarif, rétractation et évaluation.',
   sections: [
     {
       heading: 'Article 1 — Objet',
@@ -114,7 +114,7 @@ export const cgv = {
       blocks: [
         {
           type: 'p',
-          text: 'Forma Pro Solutions propose la formation « Intégrer le management d’équipe dans son activité professionnelle », préparant à la certification enregistrée sous le numéro RS6931 au Répertoire Spécifique de France Compétences (certificateur : Manitude). La formation se déroule à distance, en visioconférence synchrone, sur une durée de 21 heures réparties en 3 journées, pour un effectif de 6 à 12 participants par session.',
+          text: 'Forma Pro Solutions propose la formation « Intégrer le management d’équipe dans son activité professionnelle ». La formation se déroule à distance, en visioconférence synchrone, sur une durée de 21 heures réparties en 3 journées, pour un effectif de 6 à 12 participants par session.',
         },
       ],
     },
@@ -141,7 +141,7 @@ export const cgv = {
       blocks: [
         {
           type: 'p',
-          text: 'Le tarif de la formation est de 1 650 € TTC par participant (exonération de TVA en application de l’article 261-4-4°a du Code général des impôts). Ce tarif comprend l’animation des 3 journées, le support pédagogique et les outils remis, ainsi que l’évaluation certificative. Les modalités de règlement sont précisées lors de l’inscription.',
+          text: 'Le tarif de la formation est de 1 650 € TTC par participant (exonération de TVA en application de l’article 261-4-4°a du Code général des impôts). Ce tarif comprend l’animation des 3 journées ainsi que le support pédagogique et les outils remis. Les modalités de règlement sont précisées lors de l’inscription.',
         },
       ],
     },
@@ -164,11 +164,11 @@ export const cgv = {
       ],
     },
     {
-      heading: 'Article 8 — Évaluation et certification',
+      heading: 'Article 8 — Évaluation des acquis',
       blocks: [
         {
           type: 'p',
-          text: 'L’évaluation certificative comprend une préparation écrite (E1) et une mise en situation sur un cas fictif de management (E2), devant un jury professionnel de 2 membres. L’organisation des épreuves est confiée au service Centre d’Examen du certificateur Manitude, qui prononce la décision finale et édite le certificat en cas de réussite.',
+          text: 'Les acquis sont évalués tout au long du parcours, à partir des ateliers de production, des mises en situation et des livrables réalisés par chaque participant. Une attestation de fin de formation, précisant les objectifs et les résultats de l’évaluation des acquis, est remise à l’issue du parcours conformément à l’article L.6353-1 du Code du travail.',
         },
       ],
     },
@@ -268,7 +268,7 @@ export const confidentialite = {
       blocks: [
         {
           type: 'p',
-          text: 'Les données sont destinées aux personnes habilitées de Forma Pro Solutions. Dans le cadre de l’évaluation certificative, certaines données sont transmises au certificateur Manitude. Aucune donnée n’est cédée ou vendue à des tiers à des fins commerciales.',
+          text: 'Les données sont destinées aux personnes habilitées de Forma Pro Solutions. Aucune donnée n’est cédée ou vendue à des tiers à des fins commerciales.',
         },
       ],
     },

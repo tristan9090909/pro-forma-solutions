@@ -12,14 +12,14 @@ import { site, company, training } from '../data/site.mjs';
 export const formation = {
   url: '/formation/',
   file: 'formation/index.html',
-  title: 'Formation RS6931 — management d’équipe | Forma Pro Solutions',
+  title: 'Formation au management d’équipe | Forma Pro Solutions',
   description:
-    'Intégrer le management d’équipe dans son activité professionnelle (RS6931) : 21 heures à distance, 6 modules, programme, évaluation et tarif.',
+    'Intégrer le management d’équipe dans son activité professionnelle : 21 heures à distance, 6 modules, programme, évaluation et tarif.',
   breadcrumb: [{ label: 'Formation', url: '/formation/' }],
   build() {
     return html`
       ${pageHero({
-        eyebrow: `${training.code} — ${training.repertoire} — certificateur ${training.certifier}`,
+        eyebrow: 'Formation professionnelle — management de proximité',
         title: training.title,
         lead: 'Une formation opérationnelle au management de proximité, destinée aux professionnels qui encadrent une équipe tout en continuant d’exercer leur métier.',
         meta: [
@@ -34,7 +34,7 @@ export const formation = {
         id: 'synthese',
         eyebrow: 'Fiche formation',
         title: 'Synthèse',
-        lead: 'Les informations ci-dessous sont identiques à celles du programme officiel téléchargeable.',
+        lead: 'Durée, format, public visé, tarif et modalités de la formation.',
         body: html`
           ${trainingSummaryTable()}
           <div class="included">
@@ -45,21 +45,6 @@ export const formation = {
               )}
             </ul>
             <p class="included__note">${training.includedNote} ${training.priceNote}</p>
-          </div>
-          <div class="certif-links">
-            <a
-              class="link-arrow"
-              href="${training.franceCompetencesUrl}"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Fiche ${training.code} sur France Compétences
-              ${icon('external', { className: 'icon icon--sm' })}
-            </a>
-            <p class="certif-links__note">
-              Certification enregistrée le ${training.registeredOn} — échéance le
-              ${training.expiresOn}. Domaine NSF : ${training.nsf}.
-            </p>
           </div>
         `,
       })}
@@ -117,7 +102,7 @@ export const formation = {
             <ol class="objectives" role="list">
               ${training.objectives.map(
                 (objective, index) => html`<li class="objective">
-                  <span class="objective__num" aria-hidden="true">C${index + 1}</span>
+                  <span class="objective__num" aria-hidden="true">${index + 1}</span>
                   <p class="objective__text">${objective}</p>
                 </li>`,
               )}
@@ -131,13 +116,13 @@ export const formation = {
         variant: 'alt',
         eyebrow: 'Programme détaillé',
         title: 'Six modules de 3h30',
-        lead: 'Le programme officiel complet est téléchargeable au format PDF, sans modification.',
+        lead: 'Le déroulé complet des trois journées, module par module.',
         body: html`
           <ol class="modules" role="list">
             ${training.modules.map(
               (module) => html`<li class="module">
                 <div class="module__head">
-                  <span class="module__num">Module ${module.number} · ${module.code}</span>
+                  <span class="module__num">Module ${module.number}</span>
                   <span class="module__duration">
                     ${icon('clock', { className: 'icon icon--sm' })}${module.duration}
                   </span>
@@ -150,23 +135,9 @@ export const formation = {
           </ol>
 
           <p class="modules__note">
-            Chaque heure de formation est rattachée à un module ; les épreuves de certification se
-            déroulent en dehors de ce temps de formation.
+            Les six modules couvrent l’intégralité des 21 heures de formation. Le programme détaillé
+            est adressé sur simple demande.
           </p>
-
-          <div class="download">
-            <span class="download__icon">${icon('document')}</span>
-            <div class="download__body">
-              <p class="download__title">Programme de formation ${training.code} (PDF)</p>
-              <p class="download__text">
-                Document officiel : objectifs, contenu détaillé des modules, méthodes pédagogiques et
-                modalités d’évaluation. Programme mis à jour le ${training.programUpdated}.
-              </p>
-            </div>
-            <a class="btn btn--primary" href="${training.programPdf}" download>
-              ${icon('download', { className: 'icon icon--sm' })}Télécharger le programme
-            </a>
-          </div>
         `,
       })}
 
@@ -205,46 +176,14 @@ export const formation = {
       })}
 
       ${section({
-        id: 'certification',
+        id: 'evaluation',
         variant: 'alt',
         eyebrow: 'Évaluation',
-        title: 'Modalités d’évaluation et certification',
+        title: 'Modalités d’évaluation',
         body: html`
           <div class="prose prose--narrow">
-            <p>${training.certification}</p>
+            <p>${training.assessment}</p>
           </div>
-          <ul class="steps" role="list">
-            <li class="step">
-              <span class="step__num">E1</span>
-              <div>
-                <h3 class="step__title">Préparation écrite</h3>
-                <p class="step__text">
-                  Première épreuve de l’évaluation certificative, organisée par le service Centre
-                  d’Examen du certificateur ${training.certifier}.
-                </p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step__num">E2</span>
-              <div>
-                <h3 class="step__title">Mise en situation</h3>
-                <p class="step__text">
-                  Mise en situation sur un cas fictif de management, devant un jury professionnel de
-                  2 membres disposant de 3 ans d’expérience dans le domaine managérial.
-                </p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step__num">${icon('award', { className: 'icon icon--sm' })}</span>
-              <div>
-                <h3 class="step__title">Jury de délivrance</h3>
-                <p class="step__text">
-                  La décision finale est prononcée par ${training.certifier} ; en cas de réussite, un
-                  certificat de compétences est édité par le certificateur.
-                </p>
-              </div>
-            </li>
-          </ul>
 
           <div class="split split--top">
             <div class="split__col">
@@ -316,17 +255,9 @@ export const formation = {
         '@id': `${site.baseUrl}/formation/#course`,
         name: training.title,
         description:
-          'Formation certifiante au management d’équipe et à la prise de fonction managériale : cadrage des objectifs, délégation, pilotage d’activité, entretiens de suivi, animation de réunion et adaptation du style managérial.',
+          'Formation au management d’équipe et à la prise de fonction managériale : cadrage des objectifs, délégation, pilotage d’activité, entretiens de suivi, animation de réunion et adaptation du style managérial.',
         url: `${site.baseUrl}/formation/`,
         inLanguage: 'fr-FR',
-        courseCode: training.code,
-        educationalCredentialAwarded: {
-          '@type': 'EducationalOccupationalCredential',
-          name: `${training.code} — ${training.title}`,
-          credentialCategory: 'Certification enregistrée au Répertoire Spécifique',
-          recognizedBy: { '@type': 'Organization', name: training.certifier },
-          url: training.franceCompetencesUrl,
-        },
         provider: { '@id': `${site.baseUrl}/#organisme` },
         coursePrerequisites: training.prerequisites,
         audience: { '@type': 'Audience', audienceType: 'Professionnels encadrant une équipe' },

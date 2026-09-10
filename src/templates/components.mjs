@@ -62,7 +62,7 @@ export function contactBand({
   </section>`;
 }
 
-/** Tableau de synthèse de la formation (identique au PDF du programme). */
+/** Tableau de synthèse de la formation. */
 export function trainingSummaryTable() {
   const rows = [
     { icon: 'clock', label: 'Durée', value: training.duration },
@@ -73,7 +73,6 @@ export function trainingSummaryTable() {
     { icon: 'shield', label: 'Prérequis', value: training.prerequisites },
     { icon: 'users', label: 'Effectif', value: training.groupSize },
     { icon: 'clock', label: 'Horaires', value: training.schedule },
-    { icon: 'award', label: 'Certification', value: `${training.code} — certificateur ${training.certifier}` },
     { icon: 'presentation', label: 'Formateur', value: training.trainer },
     { icon: 'chat', label: 'Sessions', value: training.sessions },
   ];

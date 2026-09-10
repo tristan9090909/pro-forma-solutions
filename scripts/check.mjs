@@ -32,8 +32,10 @@ function count(html, pattern) {
 }
 
 /**
- * Un seul programme de formation doit être publié : deux PDF en ligne, c'est le risque
- * qu'un ancien programme reste téléchargeable et contredise le contenu du site.
+ * Le PDF publié doit correspondre exactement à `training.programPdf` : deux PDF en ligne,
+ * c'est le risque qu'un ancien programme reste téléchargeable et contredise le contenu du
+ * site. `programPdf: null` signifie qu'aucun programme n'est publié : aucun PDF ne doit
+ * alors subsister dans dist/.
  */
 async function pdfFiles(dir) {
   const out = [];
@@ -46,9 +48,12 @@ async function pdfFiles(dir) {
 }
 
 const pdfs = await pdfFiles(dist);
-if (pdfs.length !== 1) {
-  errors.push(`${pdfs.length} PDF publiés (un seul programme attendu) : ${pdfs.join(', ')}`);
-} else if (pdfs[0] !== training.programPdf) {
+const expectedPdfs = training.programPdf ? [training.programPdf] : [];
+if (pdfs.length !== expectedPdfs.length) {
+  errors.push(
+    `${pdfs.length} PDF publié(s), ${expectedPdfs.length} attendu(s) : ${pdfs.join(', ') || '—'}`,
+  );
+} else if (pdfs[0] && pdfs[0] !== training.programPdf) {
   errors.push(`PDF publié (${pdfs[0]}) différent du lien de téléchargement (${training.programPdf})`);
 }
 

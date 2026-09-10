@@ -1,8 +1,11 @@
 # Forma Pro Solutions — site vitrine
 
 Site vitrine de l'organisme de formation **Forma Pro Solutions** (SASU, dirigée par Kamel TREA),
-présentant la formation certifiante **RS6931 — Intégrer le management d'équipe dans son activité
-professionnelle**.
+présentant la formation **Intégrer le management d'équipe dans son activité professionnelle**.
+
+> **⚠ Retrait temporaire de la certification RS6931.** À la demande du certificateur, toute mention
+> de la certification RS6931 a été retirée du site tant que l'habilitation n'est pas validée.
+> La version complète est conservée dans Git : voir la section « Remettre la certification RS6931 ».
 
 Le site est un **générateur statique en JavaScript** (Node, aucune dépendance) : les contenus sont
 centralisés dans des modules de données, les pages sont produites en HTML statique dans `dist/`,
@@ -41,7 +44,6 @@ src/
 public/                   fichiers copiés tels quels à la racine du site
   contact.php             traitement du formulaire (PHP 8)
   .htaccess               HTTPS, URL propres, en-têtes de sécurité, cache
-  documents/              programme officiel PDF
 dist/                     résultat du build (à déposer sur l'hébergement)
 ```
 
@@ -80,8 +82,26 @@ CGV, mention obligatoire au titre des articles L.612-1 et suivants du Code de la
 ### 3.3 Cohérence site / PDF
 
 Le tarif (1 650 € TTC), la durée (21 heures), les modules et les modalités affichés proviennent tous
-de `src/data/site.mjs` et doivent rester **identiques au PDF** `public/documents/`. En cas de mise à
-jour du programme, modifier les deux.
+de `src/data/site.mjs`. Tant que la certification est retirée, **aucun programme PDF n'est publié**
+(`training.programPdf` vaut `null`) : le PDF en vigueur décrit la certification RS6931. À la
+republication, remettre le fichier dans `public/documents/` et le chemin dans `programPdf` — les
+deux doivent rester identiques.
+
+### 3.4 Remettre la certification RS6931
+
+La version du site antérieure au retrait est le tag Git `v1-avec-rs6931` :
+
+```bash
+git checkout v1-avec-rs6931 -- src public package.json scripts README.md
+node build.mjs && node scripts/check.mjs
+```
+
+Les éléments retirés étaient : le code, le certificateur et le lien France Compétences
+(`src/data/site.mjs`), le bloc « Modalités d'évaluation et certification » et le téléchargement du
+programme (`src/pages/formation.mjs`), les repères de certification de l'accueil et de la page
+à propos, l'encadré « Épreuves de certification » de la page accessibilité, les articles 2, 5 et 8
+des CGV et le destinataire certificateur de la politique de confidentialité (`src/data/legal.mjs`),
+le visuel Open Graph (`src/assets/img/og-image.svg` + `.png`) et le programme PDF.
 
 ---
 
@@ -155,7 +175,7 @@ puis créer chez Hostinger les enregistrements DNS indiqués par Vercel. Mettre 
    gestionnaire de fichiers ou en FTP. Inclure les fichiers masqués (`.htaccess`).
 5. Activer le certificat SSL gratuit (Let's Encrypt) depuis le panneau Hostinger. Le `.htaccess`
    force ensuite HTTPS et la version sans `www`.
-6. Contrôler : page d'accueil, téléchargement du PDF, envoi du formulaire, page 404, rendu mobile.
+6. Contrôler : page d'accueil, envoi du formulaire, page 404, rendu mobile.
 
 Mise à jour ultérieure : modifier `src/data/`, relancer `node build.mjs` puis `node scripts/check.mjs`,
 et redéposer le contenu de `dist/`.
@@ -167,7 +187,7 @@ et redéposer le contenu de `dist/`.
 | URL | Contenu |
 |---|---|
 | `/` | Hero, présentation, compétences, formation phare, bandeau Qualiopi + NDA, formateur |
-| `/formation/` | Synthèse, public et prérequis, objectifs, programme + PDF, modalités, certification, délai d'accès |
+| `/formation/` | Synthèse, public et prérequis, objectifs, programme, modalités, évaluation, délai d'accès |
 | `/a-propos/` | Mission, positionnement, formateur, références réglementaires |
 | `/accessibilite-handicap/` | Texte d'engagement, référent handicap, démarche |
 | `/contact/` | Formulaire, coordonnées, délai de réponse |

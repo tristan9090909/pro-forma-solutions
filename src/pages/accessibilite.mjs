@@ -88,12 +88,12 @@ export const accessibilite = {
             </li>
           </ul>
           ${noteBox({
-            title: 'Épreuves de certification',
+            title: 'Signaler une situation particulière',
             iconName: 'info',
             children: html`<p>
-              Les demandes d’aménagement des épreuves d’évaluation certificative sont transmises au
-              certificateur Manitude, qui organise les épreuves. Signalez votre situation le plus tôt
-              possible afin que la demande puisse être instruite dans les délais.
+              Signalez votre situation le plus tôt possible, dès le positionnement : les aménagements
+              pédagogiques, matériels et organisationnels peuvent ainsi être étudiés et mis en place
+              avant le démarrage de la formation.
             </p>`,
           })}
         `,

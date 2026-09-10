@@ -51,7 +51,7 @@ export const aPropos = {
             </p>
             <p>
               ${company.legalName} a été créé pour répondre à ce besoin précis. L’organisme propose
-              une formation certifiante, « ${training.title} » (${training.code}), qui donne aux
+              une formation, « ${training.title} », qui donne aux
               professionnels les moyens d’endosser un rôle managérial : fixer des objectifs,
               déléguer, piloter l’activité, conduire les entretiens de suivi, animer les réunions
               d’équipe et adapter sa posture aux situations difficiles.
@@ -124,7 +124,7 @@ export const aPropos = {
         id: 'references',
         variant: 'alt',
         eyebrow: 'Références réglementaires',
-        title: 'Certification et enregistrement',
+        title: 'Certification qualité et enregistrement',
         body: html`
           ${complianceBanner()}
           <div class="table-wrap">
@@ -156,15 +156,6 @@ export const aPropos = {
                 <tr>
                   <th scope="row"><span>Certification Qualiopi</span></th>
                   <td>${compliance.qualiopi.full}</td>
-                </tr>
-                <tr>
-                  <th scope="row"><span>Code certification</span></th>
-                  <td>
-                    ${training.code} — ${training.repertoire} — certificateur ${training.certifier}
-                    <span class="data-table__note">
-                      Enregistrée le ${training.registeredOn}, échéance le ${training.expiresOn}.
-                    </span>
-                  </td>
                 </tr>
               </tbody>
             </table>

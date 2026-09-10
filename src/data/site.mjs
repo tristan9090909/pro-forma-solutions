@@ -4,8 +4,8 @@
  * IMPORTANT (audit CDC / EDOF) :
  *  - Aucune mention de financement, de dispositif de prise en charge ou de gratuité
  *    ne doit apparaître dans ce fichier ni dans les gabarits (loi du 19 décembre 2022).
- *  - Le tarif et le programme ci-dessous doivent rester strictement identiques
- *    à ceux du PDF téléchargeable (public/documents/).
+ *  - Aucune mention de la certification RS6931 (code, certificateur, épreuves,
+ *    Répertoire Spécifique) tant que l'habilitation du certificateur n'est pas validée.
  *  - Les mentions NDA (art. L.6352-12 du Code du travail) sont reproduites mot pour mot.
  */
 
@@ -16,7 +16,7 @@ export const site = {
   locale: 'fr_FR',
   themeColor: '#0d2740',
   description:
-    "Forma Pro Solutions, organisme de formation certifié Qualiopi, propose la formation « Intégrer le management d’équipe dans son activité professionnelle » (RS6931), à distance, en visioconférence.",
+    "Forma Pro Solutions, organisme de formation certifié Qualiopi, propose la formation « Intégrer le management d’équipe dans son activité professionnelle », à distance, en visioconférence.",
 };
 
 export const company = {
@@ -80,13 +80,6 @@ export const compliance = {
 
 export const training = {
   title: 'Intégrer le management d’équipe dans son activité professionnelle',
-  code: 'RS6931',
-  repertoire: 'Répertoire Spécifique',
-  certifier: 'Manitude',
-  franceCompetencesUrl: 'https://www.francecompetences.fr/recherche/rs/6931',
-  registeredOn: '28/11/2024',
-  expiresOn: '28/11/2026',
-  nsf: '310 — Spécialités plurivalentes des échanges et de la gestion (management opérationnel)',
   format: '100 % à distance, en visioconférence synchrone (Zoom) — aucune séquence e-learning',
   formatShort: 'À distance, en visioconférence synchrone (Zoom)',
   duration: '21 heures, réparties sur 3 journées de 7 heures',
@@ -103,15 +96,14 @@ export const training = {
   included: [
     'L’animation des 3 journées',
     'Le support pédagogique et les outils remis',
-    'La présentation à la certification (frais d’inscription et de jury inclus)',
   ],
   includedNote:
-    'Aucun frais supplémentaire n’est demandé au stagiaire pour l’examen.',
+    'Aucun frais supplémentaire n’est demandé au stagiaire.',
   place: 'À distance (visioconférence)',
   trainer: 'Kamel TREA',
   sessions: 'Sessions ouvertes sur demande',
   audience:
-    'La certification s’adresse aux professionnels opérationnels qui ont besoin d’acquérir des compétences spécifiques leur permettant d’endosser un rôle managérial auprès d’une équipe tout en continuant à exercer leurs activités habituelles.',
+    'La formation s’adresse aux professionnels opérationnels qui ont besoin d’acquérir des compétences spécifiques leur permettant d’endosser un rôle managérial auprès d’une équipe tout en continuant à exercer leurs activités habituelles.',
   prerequisites:
     'Expérience professionnelle de 2 ans dans leur expertise métier nécessitant la maîtrise de compétences managériales. Ce prérequis sera validé au travers d’un dossier d’admission.',
   /** Objectifs pédagogiques — programme V2, section « Objectifs pédagogiques ». */
@@ -124,9 +116,9 @@ export const training = {
     'animer des réunions d’équipe ;',
     'adapter son style managérial aux différentes situations rencontrées.',
   ],
-  /** Compétences visées — libellés de la certification, repris mot pour mot du programme V2. */
+  /** Compétences visées — libellés repris mot pour mot du programme V2. */
   competencesIntro:
-    'La formation prépare aux six compétences attestées par la certification :',
+    'La formation travaille six compétences managériales :',
   objectives: [
     'Définir les objectifs des membres de l’équipe en adéquation avec les besoins spécifiques du service, en tenant compte du contexte, de la stratégie globale et des valeurs de l’entreprise, afin de mobiliser l’équipe autour d’une vision commune de performance et permettre l’élaboration d’un plan d’action opérationnel.',
     'Attribuer les missions et tâches du service aux collaborateurs, en s’assurant que la délégation tienne compte de leurs compétences, leurs capacités et leurs profils (métiers, ancienneté, situation de handicap, etc.), afin d’organiser les activités du service et atteindre les objectifs fixés.',
@@ -136,13 +128,12 @@ export const training = {
     'Adapter son style managérial et sa communication face aux différentes situations managériales, difficiles ou non (annonce d’une bonne nouvelle, conflit, annonce de décision difficile, accompagnement au changement, gestion de crise interne/externe…), en tenant compte des collaborateurs, du service et de l’entreprise, afin de renforcer son rôle de manager et motiver ses collaborateurs.',
   ],
   /**
-   * Modules du programme V2 : chaque module travaille une compétence de la certification
-   * (C1 à C6) et dure 3h30. Les objectifs sont repris du programme officiel.
+   * Modules du programme V2 : chaque module travaille une compétence managériale
+   * et dure 3h30. Les objectifs sont repris du programme officiel.
    */
   modules: [
     {
       number: 1,
-      code: 'C1',
       title: 'Donner un cap : de la commande reçue à ce qu’on attend de chacun',
       duration: '3h30',
       slot: 'Jour 1 — 9h00 à 12h30',
@@ -151,7 +142,6 @@ export const training = {
     },
     {
       number: 2,
-      code: 'C2',
       title: 'Faire tourner le service quand tout paraît urgent : qui prend quoi, et pourquoi lui',
       duration: '3h30',
       slot: 'Jour 1 — 14h00 à 17h30',
@@ -160,7 +150,6 @@ export const training = {
     },
     {
       number: 3,
-      code: 'C3',
       title: 'Garder la main sur le travail réel : ce qu’on mesure, ce qu’on en fait',
       duration: '3h30',
       slot: 'Jour 2 — 9h00 à 12h30',
@@ -169,7 +158,6 @@ export const training = {
     },
     {
       number: 4,
-      code: 'C4',
       title: 'Le tête-à-tête : reconnaître, remettre d’aplomb, débloquer',
       duration: '3h30',
       slot: 'Jour 2 — 14h00 à 17h30',
@@ -178,7 +166,6 @@ export const training = {
     },
     {
       number: 5,
-      code: 'C5',
       title: 'Le point d’équipe : une heure dont on sort avec quelque chose',
       duration: '3h30',
       slot: 'Jour 3 — 9h00 à 12h30',
@@ -187,7 +174,6 @@ export const training = {
     },
     {
       number: 6,
-      code: 'C6',
       title: 'Le manager en situation : choisir son registre, tenir sa ligne',
       duration: '3h30',
       slot: 'Jour 3 — 14h00 à 17h30',
@@ -195,8 +181,8 @@ export const training = {
         'Identifier les quatre styles de management et son style dominant ; adapter son registre à la situation et à l’interlocuteur ; tenir sa ligne dans les situations difficiles.',
     },
   ],
-  certification:
-    'Évaluation certificative en deux épreuves : une préparation écrite (E1) et une mise en situation sur un cas fictif de management (E2). Le candidat est évalué par un jury professionnel de 2 membres, disposant de 3 ans d’expérience dans le domaine managérial, dans le respect des exigences d’impartialité, d’indépendance et de dissociation du parcours de formation. L’organisation et la réalisation des épreuves sont confiées au service Centre d’Examen du certificateur Manitude. La décision finale est prononcée par Manitude au cours d’un jury de délivrance ; en cas de réussite, un certificat de compétences est édité par Manitude. L’évaluation certificative est incluse dans le tarif.',
+  assessment:
+    'Les acquis sont évalués en continu, à partir des ateliers de production, des mises en situation et des livrables réalisés par chaque participant. À l’issue du parcours, une attestation de fin de formation est remise à chaque participant : elle précise les objectifs de la formation, sa durée et les résultats de l’évaluation des acquis, conformément à l’article L.6353-1 du Code du travail.',
   accessDelay:
     'L’inscription doit être finalisée au minimum 14 jours calendaires avant le début de la formation, conformément à l’article L. 221-18 du Code de la consommation (délai légal de rétractation).',
 
@@ -207,7 +193,7 @@ export const training = {
     's’assurer de l’existence et de l’adéquation du projet du candidat ;',
     'identifier ses pratiques managériales actuelles ;',
     'recueillir ses besoins particuliers, notamment en matière de handicap ;',
-    'adapter l’accompagnement pédagogique sans modifier les compétences ni les critères de la certification.',
+    'adapter l’accompagnement pédagogique aux besoins identifiés, sans modifier les objectifs de la formation.',
   ],
 
   /** Modalités pédagogiques — programme V2. */
@@ -222,15 +208,14 @@ export const training = {
 
   /** Indicateurs de résultats — obligation Qualiopi, formulation du programme V2. */
   results:
-    'La formation étant proposée pour la première fois, les indicateurs de résultats ne sont pas encore disponibles. Seront publiés dès la première session : le taux de satisfaction des stagiaires, le taux de réussite à la certification, le taux d’assiduité et le taux d’abandon.',
+    'La formation étant proposée pour la première fois, les indicateurs de résultats ne sont pas encore disponibles. Seront publiés dès la première session : le taux de satisfaction des stagiaires, le taux d’assiduité et le taux d’abandon.',
 
   /**
-   * Programme officiel téléchargeable — version V2 (seule version publiée).
-   * Le nom du fichier est versionné : une mise à jour du programme doit changer ce nom,
-   * afin qu'aucun cache ne puisse servir l'ancienne version.
+   * Programme officiel téléchargeable. `null` = aucun programme publié : le PDF en vigueur
+   * décrit la certification, il est retiré du site tant que l'habilitation n'est pas validée.
+   * Remettre ici le chemin du PDF (et le fichier dans public/documents/) pour le republier.
    */
-  programPdf: '/documents/programme-de-formation-rs6931-forma-pro-solutions-v2.pdf',
-  programUpdated: '30/07/2026',
+  programPdf: null,
 };
 
 export const accessibility = {

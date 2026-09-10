@@ -2,7 +2,7 @@
   "name": "forma-pro-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "Site vitrine Forma Pro Solutions — organisme de formation certifie Qualiopi (RS6931)",
+  "description": "Site vitrine Forma Pro Solutions — organisme de formation certifie Qualiopi",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
