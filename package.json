@@ -1,0 +1,18 @@
+{
+  "name": "forma-pro-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine Forma Pro Solutions — organisme de formation certifie Qualiopi (RS6931)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "serve": "node serve.mjs",
+    "start": "node build.mjs && node serve.mjs",
+    "check": "node scripts/check.mjs",
+    "verify": "node build.mjs && node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

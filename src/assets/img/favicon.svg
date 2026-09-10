@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Forma Pro Solutions">
+  <title>Forma Pro Solutions</title>
+  <rect width="40" height="40" rx="9" fill="#0d2740"/>
+  <path d="M11 13.5h18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M11 20h12" stroke="#a9cbe4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M11 26.5h7" stroke="#6ea6cf" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="27.5" cy="26.5" r="3" fill="#4a90c2"/>
+</svg>

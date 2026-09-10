@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Forma Pro Solutions — organisme de formation">
+  <title>Forma Pro Solutions</title>
+  <g transform="translate(0 12)">
+    <rect width="40" height="40" rx="9" fill="#0d2740"/>
+    <path d="M12 13.5h16" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M12 20h11" stroke="#a9cbe4" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M12 26.5h6.5" stroke="#6ea6cf" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="27.5" cy="26.5" r="2.6" fill="#4a90c2"/>
+  </g>
+  <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" fill="#0a2237">
+    <text x="54" y="34" font-size="19" letter-spacing="-0.2">
+      <tspan font-weight="400">Forma Pro </tspan><tspan font-weight="700">Solutions</tspan>
+    </text>
+    <text x="54" y="49" font-size="8.4" letter-spacing="1.7" fill="#55606d" font-weight="600">ORGANISME DE FORMATION</text>
+  </g>
+</svg>
