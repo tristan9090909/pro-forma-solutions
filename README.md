@@ -1,7 +1,7 @@
 # Forma Pro Solutions — site vitrine
 
 Site vitrine de l'organisme de formation **Forma Pro Solutions** (SASU, dirigée par Kamel TREA),
-présentant la formation **Intégrer le management d'équipe dans son activité professionnelle**.
+présentant la formation **Réussir sa prise de fonction de manager**.
 
 > **⚠ Retrait temporaire de la certification RS6931.** À la demande du certificateur, toute mention
 > de la certification RS6931 a été retirée du site tant que l'habilitation n'est pas validée.

@@ -12,9 +12,9 @@ import { site, company, training } from '../data/site.mjs';
 export const formation = {
   url: '/formation/',
   file: 'formation/index.html',
-  title: 'Formation au management d’équipe | Forma Pro Solutions',
+  title: 'Réussir sa prise de fonction de manager | Forma Pro Solutions',
   description:
-    'Intégrer le management d’équipe dans son activité professionnelle : 21 heures à distance, 6 modules, programme, évaluation et tarif.',
+    'Réussir sa prise de fonction de manager : 21 heures à distance, 6 modules, programme, modalités d’évaluation et tarif.',
   breadcrumb: [{ label: 'Formation', url: '/formation/' }],
   build() {
     return html`
@@ -95,19 +95,6 @@ export const formation = {
               (item) => html`<li>${icon('check', { className: 'icon icon--sm' })}${item}</li>`,
             )}
           </ul>
-
-          <div class="competences">
-            <h3 class="competences__title">Compétences visées</h3>
-            <p class="competences__lead">${training.competencesIntro}</p>
-            <ol class="objectives" role="list">
-              ${training.objectives.map(
-                (objective, index) => html`<li class="objective">
-                  <span class="objective__num" aria-hidden="true">${index + 1}</span>
-                  <p class="objective__text">${objective}</p>
-                </li>`,
-              )}
-            </ol>
-          </div>
         `,
       })}
 
@@ -261,7 +248,7 @@ export const formation = {
         provider: { '@id': `${site.baseUrl}/#organisme` },
         coursePrerequisites: training.prerequisites,
         audience: { '@type': 'Audience', audienceType: 'Professionnels encadrant une équipe' },
-        teaches: training.objectives,
+        teaches: training.pedagogicalObjectives,
         offers: {
           '@type': 'Offer',
           price: training.priceValue,

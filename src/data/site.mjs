@@ -16,7 +16,7 @@ export const site = {
   locale: 'fr_FR',
   themeColor: '#0d2740',
   description:
-    "Forma Pro Solutions, organisme de formation certifié Qualiopi, propose la formation « Intégrer le management d’équipe dans son activité professionnelle », à distance, en visioconférence.",
+    "Forma Pro Solutions, organisme de formation certifié Qualiopi, propose la formation « Réussir sa prise de fonction de manager », à distance, en visioconférence.",
 };
 
 export const company = {
@@ -79,7 +79,7 @@ export const compliance = {
 };
 
 export const training = {
-  title: 'Intégrer le management d’équipe dans son activité professionnelle',
+  title: 'Réussir sa prise de fonction de manager',
   format: '100 % à distance, en visioconférence synchrone (Zoom) — aucune séquence e-learning',
   formatShort: 'À distance, en visioconférence synchrone (Zoom)',
   duration: '21 heures, réparties sur 3 journées de 7 heures',
@@ -103,9 +103,9 @@ export const training = {
   trainer: 'Kamel TREA',
   sessions: 'Sessions ouvertes sur demande',
   audience:
-    'La formation s’adresse aux professionnels opérationnels qui ont besoin d’acquérir des compétences spécifiques leur permettant d’endosser un rôle managérial auprès d’une équipe tout en continuant à exercer leurs activités habituelles.',
+    'Professionnels qui encadrent ou vont encadrer une équipe tout en continuant d’exercer leur métier.',
   prerequisites:
-    'Expérience professionnelle de 2 ans dans leur expertise métier nécessitant la maîtrise de compétences managériales. Ce prérequis sera validé au travers d’un dossier d’admission.',
+    'Au moins deux ans d’expérience professionnelle dans son métier. Un entretien de positionnement valide l’inscription.',
   /** Objectifs pédagogiques — programme V2, section « Objectifs pédagogiques ». */
   objectivesIntro: 'À l’issue de la formation, le participant est capable de :',
   pedagogicalObjectives: [
@@ -115,17 +115,6 @@ export const training = {
     'conduire des entretiens individuels de suivi ;',
     'animer des réunions d’équipe ;',
     'adapter son style managérial aux différentes situations rencontrées.',
-  ],
-  /** Compétences visées — libellés repris mot pour mot du programme V2. */
-  competencesIntro:
-    'La formation travaille six compétences managériales :',
-  objectives: [
-    'Définir les objectifs des membres de l’équipe en adéquation avec les besoins spécifiques du service, en tenant compte du contexte, de la stratégie globale et des valeurs de l’entreprise, afin de mobiliser l’équipe autour d’une vision commune de performance et permettre l’élaboration d’un plan d’action opérationnel.',
-    'Attribuer les missions et tâches du service aux collaborateurs, en s’assurant que la délégation tienne compte de leurs compétences, leurs capacités et leurs profils (métiers, ancienneté, situation de handicap, etc.), afin d’organiser les activités du service et atteindre les objectifs fixés.',
-    'Élaborer des outils de pilotage des activités de son service, en créant des tableaux de bord pour l’équipe et chacun des collaborateurs, afin de suivre l’atteinte des objectifs individuels et collectifs, rendre compte des résultats du service et mettre en place les éventuelles actions correctives nécessaires.',
-    'Réaliser des entretiens individuels de suivi des collaborateurs du service, en adaptant sa communication, ses techniques managériales et sa posture en fonction de la nature de l’entretien (félicitation, recadrage, encouragement, feedback, etc.) et du comportement des collaborateurs, afin de s’assurer de l’avancement des missions, détecter les éventuelles difficultés et adapter ses actions en conséquence.',
-    'Animer des réunions d’équipe, en favorisant l’implication et la collaboration active de chacun des collaborateurs, afin de s’assurer de l’engagement de l’équipe pour atteindre les objectifs fixés.',
-    'Adapter son style managérial et sa communication face aux différentes situations managériales, difficiles ou non (annonce d’une bonne nouvelle, conflit, annonce de décision difficile, accompagnement au changement, gestion de crise interne/externe…), en tenant compte des collaborateurs, du service et de l’entreprise, afin de renforcer son rôle de manager et motiver ses collaborateurs.',
   ],
   /**
    * Modules du programme V2 : chaque module travaille une compétence managériale

@@ -114,7 +114,7 @@ export const cgv = {
       blocks: [
         {
           type: 'p',
-          text: 'Forma Pro Solutions propose la formation « Intégrer le management d’équipe dans son activité professionnelle ». La formation se déroule à distance, en visioconférence synchrone, sur une durée de 21 heures réparties en 3 journées, pour un effectif de 6 à 12 participants par session.',
+          text: 'Forma Pro Solutions propose la formation « Réussir sa prise de fonction de manager ». La formation se déroule à distance, en visioconférence synchrone, sur une durée de 21 heures réparties en 3 journées, pour un effectif de 6 à 12 participants par session.',
         },
       ],
     },

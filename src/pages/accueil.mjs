@@ -40,9 +40,9 @@ const highlights = [
 export const accueil = {
   url: '/',
   file: 'index.html',
-  title: 'Formation management d’équipe | Forma Pro Solutions',
+  title: 'Réussir sa prise de fonction de manager | Forma Pro Solutions',
   description:
-    'Formation au management de proximité : 21 heures à distance, en visioconférence. Organisme de formation certifié Qualiopi.',
+    'Réussir sa prise de fonction de manager : 21 heures à distance, en visioconférence. Organisme de formation certifié Qualiopi.',
   build() {
     return html`
       <section class="hero">
@@ -167,10 +167,6 @@ export const accueil = {
               </li>`,
             )}
           </ul>
-          <p class="section__footnote">
-            Les six compétences travaillées sont détaillées sur la
-            <a href="/formation/#objectifs">page de la formation</a>.
-          </p>
         `,
       })}
 
